@@ -16,9 +16,7 @@
 		D72EDECC205FE145000F807A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D72EDECB205FE145000F807A /* main.m */; };
 		D72EDED6205FE145000F807A /* fixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D72EDED5205FE145000F807A /* fixTests.m */; };
 		D72EDEE1205FE145000F807A /* fixUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D72EDEE0205FE145000F807A /* fixUITests.m */; };
-		D72EDEF0205FE285000F807A /* HJGContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D72EDEEF205FE285000F807A /* HJGContentModel.m */; };
-		D72EDEF3205FE296000F807A /* HJGContentItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D72EDEF2205FE296000F807A /* HJGContentItemModel.m */; };
-		D72EDEF5205FE41A000F807A /* a.json in Resources */ = {isa = PBXBuildFile; fileRef = D72EDEF4205FE41A000F807A /* a.json */; };
+		D7540EBB206A725B0040D029 /* HJGCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7540EBA206A725B0040D029 /* HJGCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +55,8 @@
 		D72EDEDC205FE145000F807A /* fixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72EDEE0205FE145000F807A /* fixUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fixUITests.m; sourceTree = "<group>"; };
 		D72EDEE2205FE145000F807A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D72EDEEE205FE285000F807A /* HJGContentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJGContentModel.h; sourceTree = "<group>"; };
-		D72EDEEF205FE285000F807A /* HJGContentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJGContentModel.m; sourceTree = "<group>"; };
-		D72EDEF1205FE296000F807A /* HJGContentItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJGContentItemModel.h; sourceTree = "<group>"; };
-		D72EDEF2205FE296000F807A /* HJGContentItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJGContentItemModel.m; sourceTree = "<group>"; };
-		D72EDEF4205FE41A000F807A /* a.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = a.json; sourceTree = "<group>"; };
+		D7540EB9206A725B0040D029 /* HJGCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJGCell.h; sourceTree = "<group>"; };
+		D7540EBA206A725B0040D029 /* HJGCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJGCell.m; sourceTree = "<group>"; };
 		EB95DA0C2FA8C390DA05B427 /* Pods-fix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fix.release.xcconfig"; path = "Pods/Target Support Files/Pods-fix/Pods-fix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,7 +128,6 @@
 		D72EDEBB205FE145000F807A /* fix */ = {
 			isa = PBXGroup;
 			children = (
-				D72EDEF4205FE41A000F807A /* a.json */,
 				D72EDEBC205FE145000F807A /* AppDelegate.h */,
 				D72EDEBD205FE145000F807A /* AppDelegate.m */,
 				D72EDEBF205FE145000F807A /* ViewController.h */,
@@ -143,10 +137,8 @@
 				D72EDEC7205FE145000F807A /* LaunchScreen.storyboard */,
 				D72EDECA205FE145000F807A /* Info.plist */,
 				D72EDECB205FE145000F807A /* main.m */,
-				D72EDEEE205FE285000F807A /* HJGContentModel.h */,
-				D72EDEEF205FE285000F807A /* HJGContentModel.m */,
-				D72EDEF1205FE296000F807A /* HJGContentItemModel.h */,
-				D72EDEF2205FE296000F807A /* HJGContentItemModel.m */,
+				D7540EB9206A725B0040D029 /* HJGCell.h */,
+				D7540EBA206A725B0040D029 /* HJGCell.m */,
 			);
 			path = fix;
 			sourceTree = "<group>";
@@ -279,7 +271,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D72EDEC9205FE145000F807A /* LaunchScreen.storyboard in Resources */,
-				D72EDEF5205FE41A000F807A /* a.json in Resources */,
 				D72EDEC6205FE145000F807A /* Assets.xcassets in Resources */,
 				D72EDEC4205FE145000F807A /* Main.storyboard in Resources */,
 			);
@@ -308,9 +299,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-fix/Pods-fix-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -358,9 +352,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D72EDEC1205FE145000F807A /* ViewController.m in Sources */,
-				D72EDEF0205FE285000F807A /* HJGContentModel.m in Sources */,
 				D72EDECC205FE145000F807A /* main.m in Sources */,
-				D72EDEF3205FE296000F807A /* HJGContentItemModel.m in Sources */,
+				D7540EBB206A725B0040D029 /* HJGCell.m in Sources */,
 				D72EDEBE205FE145000F807A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,7 +519,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R2ZX5R2HKV;
 				INFOPLIST_FILE = fix/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hhhhhh.fix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,7 +535,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R2ZX5R2HKV;
 				INFOPLIST_FILE = fix/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hhhhhh.fix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
